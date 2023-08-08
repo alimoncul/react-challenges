@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Title from '../components/Title';
 import DescriptionsJSON from '../descriptions.json';
 
-function ProgressBar(props?: { difficulty?: string }): JSX.Element {
+function ProgressBar(): JSX.Element {
     const [input, setInput] = useState(0);
 
     const inputPercentageHandler = (e: React.FormEvent<HTMLInputElement>) => {
