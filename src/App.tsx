@@ -1,6 +1,6 @@
-import React from 'react'
 import './App.css'
-import { Link } from 'react-router-dom'
+import DescriptionsJSON from './descriptions.json';
+import MLink from './components/MLink';
 
 function App(): JSX.Element {
 	return (
@@ -10,15 +10,8 @@ function App(): JSX.Element {
 					React Challenges
 				</p>
 				<ul className="list-group bg-dark w-50">
-					<li className="list-group-item d-flex justify-content-between align-items-center bg-dark text-light">
-						<Link to="/disable-button">Disable button</Link>
-						<span className="badge badge-primary badge-pill text-success">EASY</span>
-					</li>
-					<li className="list-group-item d-flex justify-content-between align-items-center bg-dark text-light">
-
-						Dapibus ac facilisis in
-						<span className="badge badge-primary badge-pill text-warning">MEDIUM</span>
-					</li>
+					<MLink description={DescriptionsJSON.disableButton} />
+					<MLink description={DescriptionsJSON.progressBar} />
 					<li className="list-group-item d-flex justify-content-between align-items-center bg-dark text-light">
 						Morbi leo risus
 						<span className="badge badge-primary badge-pill text-danger">HARD</span>

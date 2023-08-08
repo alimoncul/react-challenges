@@ -8,6 +8,7 @@ import reportWebVitals from './reportWebVitals'
 import App from './App'
 
 import DisableButton from './challenges/disable-button'
+import ProgressBar from './challenges/progress-bar'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -18,6 +19,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="disable-button" index element={<DisableButton />} />
+        <Route path="progress-bar" index element={<ProgressBar />} />
         <Route
           path="*"
           element={
