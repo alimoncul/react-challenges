@@ -9,6 +9,7 @@ import App from './App'
 
 import DisableButton from './challenges/disable-button'
 import ProgressBar from './challenges/progress-bar'
+import Api from './challenges/api'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -20,6 +21,7 @@ root.render(
         <Route path="/" element={<App />} />
         <Route path="disable-button" index element={<DisableButton />} />
         <Route path="progress-bar" index element={<ProgressBar />} />
+        <Route path="api" index element={<Api />} />
         <Route
           path="*"
           element={

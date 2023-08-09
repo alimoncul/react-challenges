@@ -12,5 +12,12 @@
         "description": "Create a Progress Bar that should fill based on the input percentage value.",
         "file": "src/challenges/progress-bar.tsx",
         "difficulty": "MEDIUM"
+    },
+    "api": {
+        "self": "api",
+        "title": "API",
+        "description": "Fetch some data from an API and render it dynamically.",
+        "file": "src/challenges/api.tsx",
+        "difficulty": "MEDIUM"
     }
 }
