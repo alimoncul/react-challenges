@@ -19,5 +19,12 @@
         "description": "Fetch some data from an API and render it dynamically.",
         "file": "src/challenges/api.tsx",
         "difficulty": "MEDIUM"
+    },
+    "loadMore": {
+        "self": "load-more",
+        "title": "Load More",
+        "description": "Load more posts when load more button is clicked.",
+        "file": "src/challenges/api.tsx",
+        "difficulty": "MEDIUM"
     }
 }

@@ -10,6 +10,7 @@ import App from './App'
 import DisableButton from './challenges/disable-button'
 import ProgressBar from './challenges/progress-bar'
 import Api from './challenges/api'
+import LoadMore from './challenges/load-more'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -22,6 +23,7 @@ root.render(
         <Route path="disable-button" index element={<DisableButton />} />
         <Route path="progress-bar" index element={<ProgressBar />} />
         <Route path="api" index element={<Api />} />
+        <Route path="load-more" index element={<LoadMore />} />
         <Route
           path="*"
           element={

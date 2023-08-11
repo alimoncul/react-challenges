@@ -1,6 +1,6 @@
 import './App.css'
-import DescriptionsJSON from './descriptions.json';
 import MLink from './components/MLink';
+import { sortChallenges } from './helpers';
 
 function App(): JSX.Element {
 	return (
@@ -10,13 +10,7 @@ function App(): JSX.Element {
 					React Challenges
 				</p>
 				<ul className="list-group bg-dark w-50">
-					<MLink description={DescriptionsJSON.disableButton} />
-					<MLink description={DescriptionsJSON.progressBar} />
-					<MLink description={DescriptionsJSON.api} />
-					<li className="list-group-item d-flex justify-content-between align-items-center bg-dark text-light">
-						Morbi leo risus
-						<span className="badge badge-primary badge-pill text-danger">HARD</span>
-					</li>
+					{sortChallenges().map((challenge, index) => <MLink key={challenge.title + index} description={challenge} />)}
 				</ul>
 				<div className='mt-4'>
 					<a href='https://github.com/alimoncul' target="_blank" rel="noopener noreferrer" className="App-bg p-4 text-white fs-5">
