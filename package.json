@@ -2,6 +2,10 @@
   "name": "react-challenges",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://alimoncul.github.io/react-challenges",
+  "author": {
+    "name": "Alim Öncül"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -18,9 +22,12 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
+    "gh-pages": "^6.0.0",
     "react-router-dom": "^6.10.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "watch": "react-scripts start",
     "start": "react-scripts start",
     "build": "react-scripts build",
