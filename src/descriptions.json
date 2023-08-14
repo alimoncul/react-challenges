@@ -1,0 +1,30 @@
+{
+    "disableButton": {
+        "self": "disable-button",
+        "title": "Disable button",
+        "description": "Make the button disabled when there is no character on the input field. Enable the `Submit` button (remove button from being disabled) when there is at least one character.",
+        "file": "src/challenges/disable-button.tsx",
+        "difficulty": "EASY"
+    },
+    "progressBar": {
+        "self": "progress-bar",
+        "title": "Progress Bar",
+        "description": "Create a Progress Bar that should fill based on the input percentage value.",
+        "file": "src/challenges/progress-bar.tsx",
+        "difficulty": "MEDIUM"
+    },
+    "api": {
+        "self": "api",
+        "title": "API",
+        "description": "Fetch some data from an API and render it dynamically.",
+        "file": "src/challenges/api.tsx",
+        "difficulty": "MEDIUM"
+    },
+    "loadMore": {
+        "self": "load-more",
+        "title": "Load More",
+        "description": "Load more data when load more button is clicked.",
+        "file": "src/challenges/api.tsx",
+        "difficulty": "MEDIUM"
+    }
+}
