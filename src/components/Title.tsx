@@ -22,7 +22,7 @@ function Title(props: {
     }
     return (
         <div className="Title">
-            <Link to="/" className="fs-2 float-end mb-2">← Menu</Link>
+            <Link to="/react-challenges" className="fs-2 float-end mb-2">← Menu</Link>
             <div className="card text-start bg-dark mb-4">
                 <div className="card-header bg-dark fs-4">
                     {props.description.title}

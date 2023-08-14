@@ -19,11 +19,11 @@ root.render(
   <BrowserRouter>
     <React.StrictMode>
       <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="disable-button" index element={<DisableButton />} />
-        <Route path="progress-bar" index element={<ProgressBar />} />
-        <Route path="api" index element={<Api />} />
-        <Route path="load-more" index element={<LoadMore />} />
+        <Route path="/react-challenges" element={<App />} />
+        <Route path="/react-challenges/disable-button" index element={<DisableButton />} />
+        <Route path="/react-challenges/progress-bar" index element={<ProgressBar />} />
+        <Route path="/react-challenges/api" index element={<Api />} />
+        <Route path="/react-challenges/load-more" index element={<LoadMore />} />
         <Route
           path="*"
           element={
