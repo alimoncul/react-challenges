@@ -23,7 +23,7 @@
     "loadMore": {
         "self": "load-more",
         "title": "Load More",
-        "description": "Load more posts when load more button is clicked.",
+        "description": "Load more data when load more button is clicked.",
         "file": "src/challenges/api.tsx",
         "difficulty": "MEDIUM"
     }
