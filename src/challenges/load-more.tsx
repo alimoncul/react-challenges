@@ -6,37 +6,45 @@ import { wait } from '../helpers';
 import { User } from '../helpers/types';
 
 function LoadMore(): JSX.Element {
+    const [page, setPage] = useState(1);
     const [data, setData] = useState<User[]>([]);
     const [isLoading, setIsLoading] = useState(false);
-    const [isLoaded, setIsLoaded] = useState(false);
 
     const getData = async (page?: number) => {
         setIsLoading(true);
         await wait(500);
         const resp = await fetch("https://random-data-api.com/api/v2/users?size=5");
         const toJSON = await resp.json();
-        setData(page ? data.concat(toJSON) : toJSON)
+
+        if (page) {
+            setPage(page + 1);
+            setData(data.concat(toJSON))
+        } else {
+            setData(toJSON);
+        }
+
         setIsLoading(false);
-        setIsLoaded(true);
     }
+
     useEffect(() => { getData() }, [])
+
     return (
         <div className="App">
             <header className="App-header">
                 <Title description={DescriptionsJSON.loadMore} />
-                <div className='d-flex w-100 justify-content-center'>
-                    {isLoading && <LoadingIndicator />}
-                    {isLoaded && !isLoading && data?.length &&
+                <div>
+                    <button type="button" className='btn btn-primary' onClick={() => getData(page)}>Load more</button>
+                </div>
+                {isLoading && <LoadingIndicator />}
+                <div className='w-100 justify-content-center'>
+                    {!!data?.length &&
                         data.map((d) => {
                             return (
-                                <div>
-                                    <h1>{d.first_name + ' ' + d.last_name}</h1>
-                                    <h3>{d.gender}</h3>
+                                <div className='m-4' key={d.first_name + '_' + d.last_name}>
+                                    <h4>{d.first_name + ' ' + d.last_name}</h4>
+                                    <h5>{d.gender}</h5>
                                     <div>
-                                        <span className="badge">Posted 2012-08-02 20:47:04</span>
-                                        <div className="pull-right">
-                                            <span className="label label-default">{d.date_of_birth}</span>
-                                        </div>
+                                        <h6>{d.date_of_birth}</h6>
                                     </div>
                                 </div>
                             )

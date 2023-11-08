@@ -24,7 +24,7 @@
         "self": "react-challenges/load-more",
         "title": "Load More",
         "description": "Load more data when load more button is clicked.",
-        "file": "src/challenges/api.tsx",
+        "file": "src/challenges/load-more.tsx",
         "difficulty": "MEDIUM"
     }
 }
