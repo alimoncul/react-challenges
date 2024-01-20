@@ -38,9 +38,10 @@ function LoadMore(): JSX.Element {
                 {isLoading && <LoadingIndicator />}
                 <div className='w-100 justify-content-center'>
                     {!!data?.length &&
-                        data.map((d) => {
+                        data.map((d, index) => {
                             return (
-                                <div className='m-4' key={d.first_name + '_' + d.last_name}>
+                                <div className='m-4 border rounded p-2' key={d.first_name + '_' + d.last_name}>
+                                    <h2 className='position-absolute'>{index + 1}</h2>
                                     <h4>{d.first_name + ' ' + d.last_name}</h4>
                                     <h5>{d.gender}</h5>
                                     <div>
