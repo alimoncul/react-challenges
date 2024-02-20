@@ -20,7 +20,7 @@ type SearchRef = {
 }
 
 export default function MultiSelect() {
-    const [selected, setSelected] = useState<string[]>(["Rick Potato", "Rick Tomatoes like"]);
+    const [selected, setSelected] = useState<string[]>([]);
     const [isLoading, setIsLoading] = useState(false);
     const [options, setOptions] = useState<Response[]>([]);
     const [optionsVisible, setOptionsVisible] = useState(false);
