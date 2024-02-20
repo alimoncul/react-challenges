@@ -11,6 +11,7 @@ import DisableButton from './challenges/disable-button'
 import ProgressBar from './challenges/progress-bar'
 import Api from './challenges/api'
 import LoadMore from './challenges/load-more'
+import MultiSelect from './challenges/multi-select'
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -24,6 +25,7 @@ root.render(
         <Route path="/react-challenges/progress-bar" index element={<ProgressBar />} />
         <Route path="/react-challenges/api" index element={<Api />} />
         <Route path="/react-challenges/load-more" index element={<LoadMore />} />
+        <Route path="/react-challenges/multi-select" index element={<MultiSelect />} />
         <Route
           path="*"
           element={

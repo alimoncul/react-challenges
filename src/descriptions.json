@@ -26,5 +26,12 @@
         "description": "Load more data when load more button is clicked.",
         "file": "src/challenges/load-more.tsx",
         "difficulty": "MEDIUM"
+    },
+    "multiSelect": {
+        "self": "react-challenges/multi-select",
+        "title": "Multi Select",
+        "description": "Multi select field with search functionality.",
+        "file": "src/challenges/multi-select.tsx",
+        "difficulty": "IMPOSSIBLE"
     }
 }
