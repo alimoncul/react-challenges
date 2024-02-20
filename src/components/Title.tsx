@@ -10,12 +10,21 @@ function Title(props: {
     }
 }): JSX.Element {
     let classToAssign = "";
+    let glow = false;
+
     switch (props.description.difficulty) {
         case "EASY":
             classToAssign = "text-success"
             break;
         case "MEDIUM":
             classToAssign = "text-warning"
+            break;
+        case "HARD":
+            classToAssign = "text-danger"
+            break;
+        case "IMPOSSIBLE":
+            classToAssign = "text-danger"
+            glow = true
             break;
         default:
             classToAssign = "text-danger"
@@ -26,7 +35,7 @@ function Title(props: {
             <div className="card text-start bg-dark mb-4">
                 <div className="card-header bg-dark fs-4">
                     {props.description.title}
-                    <span className={`badge badge-primary badge-pill ${classToAssign}`}>{props.description.difficulty}</span>
+                    <span className={`badge badge-primary badge-pill ${classToAssign}`} style={{ textShadow: glow ? "0 0 10px #FF0000" : "" }}>{props.description.difficulty}</span>
                     <span className="badge badge-primary fs-6 float-end">{props.description.file}</span>
                 </div>
                 <div className="card-body bg-dark">
